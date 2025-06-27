@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos - LevelUpX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>LevelUp<span>X</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="galeria-jogos">
+            <h2>Nossos Destaques</h2>
+            <div class="filtros">
+                <button class="ativo" data-categoria="todos">Todos</button>
+                <button data-categoria="rpg">RPG</button>
+                <button data-categoria="fps">FPS</button>
+                <button data-categoria="acao">Ação</button>
+            </div>
+            
+            <div class="jogos-container">
+                <div class="jogo-card" data-categoria="rpg">
+                    <figure>
+                        <img src="imagens/cyberpunk.jpg" alt="Cyberpunk 2077">
+                        <figcaption>
+                            <h3>Cyberpunk 2077</h3>
+                            <p>RPG de mundo aberto no universo cyberpunk</p>
+                            <span class="destaque">Destaque</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+                <div class="jogo-card" data-categoria="acao">
+                    <figure>
+                        <img src="imagens/god of war.webp" alt="God of War Ragnarök">
+                        <figcaption>
+                            <h3>God of War Ragnarök</h3>
+                            <p>A continuação da jornada de Kratos e Atreus</p>
+                            <span class="novo">Novo</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+                <div class="jogo-card" data-categoria="fps">
+                    <figure>
+                        <img src="imagens/Cod.webp" alt="Call of Duty: Modern Warfare II">
+                        <figcaption>
+                            <h3>Call of Duty: MW II</h3>
+                            <p>O retorno da franquia Modern Warfare</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+                <div class="jogo-card" data-categoria="rpg">
+                    <figure>
+                        <img src="imagens/eldenring.webp" alt="Elden Ring">
+                        <figcaption>
+                            <h3>Elden Ring</h3>
+                            <p>RPG de ação em mundo aberto pelos criadores de Dark Souls</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+                <div class="jogo-card" data-categoria="rpg">
+                    <figure>
+                        <img src="imagens/starfield.jpg" alt="Starfield">
+                        <figcaption>
+                            <h3>Starfield</h3>
+                            <p>O novo RPG espacial da Bethesda</p>
+                            <span class="esperado">Aguardado</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 LevelUpX. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
