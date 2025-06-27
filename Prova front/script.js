@@ -1,21 +1,20 @@
-// Filtro de jogos na página de jogos
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Filtro de jogos
     const filtroBotoes = document.querySelectorAll('.filtros button');
     const jogosCards = document.querySelectorAll('.jogo-card');
     
     if (filtroBotoes.length > 0) {
         filtroBotoes.forEach(botao => {
             botao.addEventListener('click', function() {
-                // Remove a classe ativo de todos os botões
+               
                 filtroBotoes.forEach(btn => btn.classList.remove('ativo'));
                 
-                // Adiciona a classe ativo ao botão clicado
+             
                 this.classList.add('ativo');
                 
                 const categoria = this.getAttribute('data-categoria');
                 
-                // Filtra os jogos
+              
                 jogosCards.forEach(card => {
                     if (categoria === 'todos' || card.getAttribute('data-categoria') === categoria) {
                         card.style.display = 'block';
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Validação do formulário de contato
+ 
     const formContato = document.getElementById('form-contato');
     
     if (formContato) {
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             let valido = true;
             
-            // Validação do nome
+            
             const nome = document.getElementById('nome');
             const erroNome = document.getElementById('erro-nome');
             if (nome.value.trim() === '') {
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 erroNome.textContent = '';
             }
             
-            // Validação do email
+         
             const email = document.getElementById('email');
             const erroEmail = document.getElementById('erro-email');
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 erroEmail.textContent = '';
             }
             
-            // Validação do assunto
+         
             const assunto = document.getElementById('assunto');
             const erroAssunto = document.getElementById('erro-assunto');
             if (assunto.value === '') {
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 erroAssunto.textContent = '';
             }
             
-            // Validação da mensagem
+            
             const mensagem = document.getElementById('mensagem');
             const erroMensagem = document.getElementById('erro-mensagem');
             if (mensagem.value.trim() === '') {
@@ -84,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 erroMensagem.textContent = '';
             }
             
-            // Se tudo estiver válido, exibe mensagem de sucesso
+         
             if (valido) {
                 const mensagemSucesso = document.getElementById('mensagem-sucesso');
                 formContato.reset();
                 mensagemSucesso.style.display = 'block';
                 
-                // Esconde a mensagem após 5 segundos
+               
                 setTimeout(() => {
                     mensagemSucesso.style.display = 'none';
                 }, 5000);
